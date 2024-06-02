@@ -4,12 +4,19 @@ Author: nhatruong379
 An example of using RestfulAPI: display undone and done tasks of a user
 
 Topic: Implementing an interface screen has the following components:
+
 • Select user. List of users taken from API https://jsonplaceholder.typicode.com/users
+
 • When selecting a user, call the API to get a list of that user's tasks according to userId, then displayed on the interface.
+
 • Get task list from API https://jsonplaceholder.typicode.com/users/${userId}/todos
+
 • When displayed, arrange unfinished tasks (completed = false) to the top, tasks completed (completed = true) are listed below.
+
 • There is a button to mark unfinished tasks as done, calling the PATCH API https://jsonplaceholder.typicode.com/todos/${taskId}, body {"completed": true}
+
 • Display the number of tasks completed/total number of tasks of the user at the bottom of the list.
+
 • When clicking on the Mark done button, the loading status is displayed on the button itself, then, until the API request is made successfully, update the status of
 task according to the response returned.
 
